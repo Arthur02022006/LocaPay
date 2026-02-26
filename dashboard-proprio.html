@@ -5,43 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Gérant - LocaPay</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="navbar-brand">
-            <div class="logo">
-                <i class="fas fa-home"></i>
-            </div>
+            <div class="logo"><i class="fas fa-home"></i></div>
             LocaPay
         </a>
         
         <div class="navbar-menu">
-            <a href="#" class="navbar-link active">
-                <i class="fas fa-th-large me-1"></i>Dashboard
-            </a>
-            <a href="#locataires" class="navbar-link">
-                <i class="fas fa-users me-1"></i>Locataires
-            </a>
-            <a href="#factures" class="navbar-link">
-                <i class="fas fa-bolt me-1"></i>Factures
-            </a>
-            <a href="#parametres" class="navbar-link">
-                <i class="fas fa-cog me-1"></i>Paramètres
-            </a>
+            <a href="#" class="navbar-link active"><i class="fas fa-th-large me-1"></i>Dashboard</a>
+            <a href="#locataires" class="navbar-link"><i class="fas fa-users me-1"></i>Locataires</a>
+            <a href="#factures" class="navbar-link"><i class="fas fa-bolt me-1"></i>Factures</a>
+            <a href="#parametres" class="navbar-link"><i class="fas fa-cog me-1"></i>Paramètres</a>
             <div class="dropdown">
                 <button class="btn btn-outline dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
                     <div class="avatar" style="width:32px;height:32px;">
@@ -59,62 +42,21 @@
         </div>
     </nav>
 
-    <!-- Sidebar -->
     <aside class="sidebar">
         <ul class="sidebar-menu">
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link active">
-                    <i class="fas fa-th-large"></i>
-                    Dashboard
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#locataires" class="sidebar-link">
-                    <i class="fas fa-users"></i>
-                    Mes Locataires
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#factures" class="sidebar-link">
-                    <i class="fas fa-file-invoice-dollar"></i>
-                    Factures & Charges
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="fas fa-history"></i>
-                    Historique
-                </a>
-            </li>
-            
+            <li class="sidebar-item"><a href="#" class="sidebar-link active"><i class="fas fa-th-large"></i>Dashboard</a></li>
+            <li class="sidebar-item"><a href="#locataires" class="sidebar-link"><i class="fas fa-users"></i>Mes Locataires</a></li>
+            <li class="sidebar-item"><a href="#factures" class="sidebar-link"><i class="fas fa-file-invoice-dollar"></i>Factures & Charges</a></li>
+            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="fas fa-history"></i>Historique</a></li>
             <div class="sidebar-divider"></div>
-            
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">
-                    <i class="fas fa-bell"></i>
-                    Notifications
-                    <span class="badge bg-danger ms-auto">3</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="#parametres" class="sidebar-link">
-                    <i class="fas fa-cog"></i>
-                    Paramètres
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="index.html" class="sidebar-link text-danger">
-                    <i class="fas fa-sign-out-alt"></i>
-                    Déconnexion
-                </a>
-            </li>
+            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="fas fa-bell"></i>Notifications<span class="badge bg-danger ms-auto">3</span></a></li>
+            <li class="sidebar-item"><a href="#parametres" class="sidebar-link"><i class="fas fa-cog"></i>Paramètres</a></li>
+            <li class="sidebar-item"><a href="index.html" class="sidebar-link text-danger"><i class="fas fa-sign-out-alt"></i>Déconnexion</a></li>
         </ul>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container-fluid px-4">
-            <!-- Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2 class="mb-1">Bonjour, Monsieur Diallo</h2>
@@ -127,42 +69,30 @@
                 </div>
             </div>
             
-            <!-- Stats Cards -->
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-icon yellow">
-                        <i class="fas fa-arrow-up"></i>
-                    </div>
+                    <div class="stat-icon yellow"><i class="fas fa-arrow-up"></i></div>
                     <div class="stat-content">
                         <h4>Total Loyers</h4>
                         <div class="stat-value" id="stat-rents">875,000 <span>FCFA</span></div>
                     </div>
                 </div>
-                
                 <div class="stat-card">
-                    <div class="stat-icon red">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
+                    <div class="stat-icon red"><i class="fas fa-exclamation-triangle"></i></div>
                     <div class="stat-content">
                         <h4>Impayés</h4>
                         <div class="stat-value">200,000 <span>FCFA</span></div>
                     </div>
                 </div>
-                
                 <div class="stat-card">
-                    <div class="stat-icon green">
-                        <i class="fas fa-home"></i>
-                    </div>
+                    <div class="stat-icon green"><i class="fas fa-home"></i></div>
                     <div class="stat-content">
                         <h4>Chambres Louées</h4>
                         <div class="stat-value">5 <span>/ 5</span></div>
                     </div>
                 </div>
-                
                 <div class="stat-card">
-                    <div class="stat-icon blue">
-                        <i class="fas fa-bolt"></i>
-                    </div>
+                    <div class="stat-icon blue"><i class="fas fa-bolt"></i></div>
                     <div class="stat-content">
                         <h4>Consommation Totale</h4>
                         <div class="stat-value" id="stat-consumption">1,535 <span>kWh</span></div>
@@ -170,45 +100,30 @@
                 </div>
             </div>
             
-            <!-- Calculator Section -->
             <div class="row g-4 mb-4" id="factures">
                 <div class="col-lg-6">
                     <div class="card-static">
-                        <h4 class="card-title">
-                            <i class="fas fa-bolt text-primary me-2"></i>
-                            Saisie de la Facture - Courant
-                        </h4>
-                        
+                        <h4 class="card-title"><i class="fas fa-bolt text-primary me-2"></i>Saisie de la Facture - Courant</h4>
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-group mb-3">
                                     <label class="form-label">💰 Montant total de la facture (FCFA)</label>
                                     <div class="input-group">
                                         <i class="fas fa-money-bill input-icon"></i>
-                                        <input type="number" id="billAmount" class="form-control has-icon" 
-                                               placeholder="50000" value="50000">
+                                        <input type="number" id="billAmount" class="form-control has-icon" placeholder="50000" value="50000">
                                     </div>
                                     <small class="text-muted">Montant reçu de la compagnie d'électricité</small>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Result -->
                         <div class="calculator-result" id="calcResult">
-                            <div id="calcResultContent">
-                                <!-- Le contenu sera généré par JavaScript -->
-                            </div>
+                            <div id="calcResultContent"></div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6">
                     <div class="card-static">
-                        <h4 class="card-title">
-                            <i class="fas fa-info-circle text-primary me-2"></i>
-                            Comment ça marche ?
-                        </h4>
-                        
+                        <h4 class="card-title"><i class="fas fa-info-circle text-primary me-2"></i>Comment ça marche ?</h4>
                         <div class="alert alert-info" style="border-radius: 16px;">
                             <div class="d-flex align-items-start">
                                 <i class="fas fa-lightbulb text-warning me-3 mt-1"></i>
@@ -223,7 +138,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="mt-3">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="text-muted">Total Charges à répartir:</span>
@@ -234,13 +148,9 @@
                 </div>
             </div>
             
-            <!-- Tenants Table with kWh Input -->
             <div class="table-container" id="locataires">
                 <div class="table-header">
-                    <h3 class="table-title">
-                        <i class="fas fa-users text-primary me-2"></i>
-                        Liste des Locataires - Saisie des Index
-                    </h3>
+                    <h3 class="table-title"><i class="fas fa-users text-primary me-2"></i>Liste des Locataires - Saisie des Index</h3>
                     <div class="d-flex gap-2">
                         <input type="text" id="searchInput" class="form-control" placeholder="Rechercher..." style="width:200px;">
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTenantModal">
@@ -264,41 +174,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Locataire 1 -->
-                            <tr>
+                            <tr data-tenant-id="1">
                                 <td>
                                     <div class="tenant-info">
-                                        <div class="avatar">
-                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Diallo Mamadou">
-                                        </div>
-                                        <div>
-                                            <div class="tenant-name">Diallo Mamadou</div>
-                                            <div class="tenant-phone">+221 77 123 45 67</div>
-                                        </div>
+                                        <div class="avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Diallo Mamadou"></div>
+                                        <div><div class="tenant-name">Diallo Mamadou</div><div class="tenant-phone">+221 77 123 45 67</div></div>
                                     </div>
                                 </td>
                                 <td><span class="badge badge-room">A-101</span></td>
                                 <td class="fw-bold">150,000 FCAF</td>
                                 <td>
                                     <div class="kwh-inputs">
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Ancien</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="ancien-1" value="120" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Ancien</label><input type="number" class="kwh-input" id="ancien-1" value="120" min="0"></div>
                                         <i class="fas fa-arrow-right kwh-arrow"></i>
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Nouveau</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="nouveau-1" value="245" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Nouveau</label><input type="number" class="kwh-input" id="nouveau-1" value="245" min="0"></div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;">
-                                            <div class="progress-bar bg-warning" id="progress-1" style="width: 8%"></div>
-                                        </div>
+                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;"><div class="progress-bar bg-warning" id="progress-1" style="width: 8%"></div></div>
                                         <small class="text-muted" id="progress-text-1">8%</small>
                                     </div>
                                     <small class="text-muted" id="consumption-1">125 kWh</small>
@@ -306,47 +200,30 @@
                                 <td class="text-primary fw-bold" id="elec-1">4,072 FCAF</td>
                                 <td class="fw-bold" id="due-1">154,072 FCAF</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="viewTenant(1)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="editTenant(1)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteTenant(1)"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
-                            
-                            <!-- Locataire 2 -->
-                            <tr>
+                            <tr data-tenant-id="2">
                                 <td>
                                     <div class="tenant-info">
-                                        <div class="avatar">
-                                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Ndiaye Fatou">
-                                        </div>
-                                        <div>
-                                            <div class="tenant-name">Ndiaye Fatou</div>
-                                            <div class="tenant-phone">+221 77 234 56 78</div>
-                                        </div>
+                                        <div class="avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Ndiaye Fatou"></div>
+                                        <div><div class="tenant-name">Ndiaye Fatou</div><div class="tenant-phone">+221 77 234 56 78</div></div>
                                     </div>
                                 </td>
                                 <td><span class="badge badge-room">A-102</span></td>
                                 <td class="fw-bold">175,000 FCAF</td>
                                 <td>
                                     <div class="kwh-inputs">
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Ancien</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="ancien-2" value="180" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Ancien</label><input type="number" class="kwh-input" id="ancien-2" value="180" min="0"></div>
                                         <i class="fas fa-arrow-right kwh-arrow"></i>
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Nouveau</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="nouveau-2" value="310" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Nouveau</label><input type="number" class="kwh-input" id="nouveau-2" value="310" min="0"></div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;">
-                                            <div class="progress-bar bg-warning" id="progress-2" style="width: 8%"></div>
-                                        </div>
+                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;"><div class="progress-bar bg-warning" id="progress-2" style="width: 8%"></div></div>
                                         <small class="text-muted" id="progress-text-2">8%</small>
                                     </div>
                                     <small class="text-muted" id="consumption-2">130 kWh</small>
@@ -354,47 +231,30 @@
                                 <td class="text-primary fw-bold" id="elec-2">4,235 FCAF</td>
                                 <td class="fw-bold" id="due-2">179,235 FCAF</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="viewTenant(2)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="editTenant(2)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteTenant(2)"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
-                            
-                            <!-- Locataire 3 -->
-                            <tr>
+                            <tr data-tenant-id="3">
                                 <td>
                                     <div class="tenant-info">
-                                        <div class="avatar">
-                                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Sarr Ousmane">
-                                        </div>
-                                        <div>
-                                            <div class="tenant-name">Sarr Ousmane</div>
-                                            <div class="tenant-phone">+221 76 345 67 89</div>
-                                        </div>
+                                        <div class="avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Sarr Ousmane"></div>
+                                        <div><div class="tenant-name">Sarr Ousmane</div><div class="tenant-phone">+221 76 345 67 89</div></div>
                                     </div>
                                 </td>
                                 <td><span class="badge badge-room">B-201</span></td>
                                 <td class="fw-bold">200,000 FCAF</td>
                                 <td>
                                     <div class="kwh-inputs">
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Ancien</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="ancien-3" value="200" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Ancien</label><input type="number" class="kwh-input" id="ancien-3" value="200" min="0"></div>
                                         <i class="fas fa-arrow-right kwh-arrow"></i>
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Nouveau</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="nouveau-3" value="420" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Nouveau</label><input type="number" class="kwh-input" id="nouveau-3" value="420" min="0"></div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;">
-                                            <div class="progress-bar bg-warning" id="progress-3" style="width: 14%"></div>
-                                        </div>
+                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;"><div class="progress-bar bg-warning" id="progress-3" style="width: 14%"></div></div>
                                         <small class="text-muted" id="progress-text-3">14%</small>
                                     </div>
                                     <small class="text-muted" id="consumption-3">220 kWh</small>
@@ -402,47 +262,30 @@
                                 <td class="text-primary fw-bold" id="elec-3">7,168 FCAF</td>
                                 <td class="fw-bold" id="due-3">207,168 FCAF</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="viewTenant(3)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="editTenant(3)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteTenant(3)"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
-                            
-                            <!-- Locataire 4 -->
-                            <tr>
+                            <tr data-tenant-id="4">
                                 <td>
                                     <div class="tenant-info">
-                                        <div class="avatar">
-                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Touré Aminata">
-                                        </div>
-                                        <div>
-                                            <div class="tenant-name">Touré Aminata</div>
-                                            <div class="tenant-phone">+221 77 456 78 90</div>
-                                        </div>
+                                        <div class="avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Touré Aminata"></div>
+                                        <div><div class="tenant-name">Touré Aminata</div><div class="tenant-phone">+221 77 456 78 90</div></div>
                                     </div>
                                 </td>
                                 <td><span class="badge badge-room">B-202</span></td>
                                 <td class="fw-bold">165,000 FCAF</td>
                                 <td>
                                     <div class="kwh-inputs">
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Ancien</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="ancien-4" value="150" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Ancien</label><input type="number" class="kwh-input" id="ancien-4" value="150" min="0"></div>
                                         <i class="fas fa-arrow-right kwh-arrow"></i>
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Nouveau</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="nouveau-4" value="280" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Nouveau</label><input type="number" class="kwh-input" id="nouveau-4" value="280" min="0"></div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;">
-                                            <div class="progress-bar bg-warning" id="progress-4" style="width: 8%"></div>
-                                        </div>
+                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;"><div class="progress-bar bg-warning" id="progress-4" style="width: 8%"></div></div>
                                         <small class="text-muted" id="progress-text-4">8%</small>
                                     </div>
                                     <small class="text-muted" id="consumption-4">130 kWh</small>
@@ -450,47 +293,30 @@
                                 <td class="text-primary fw-bold" id="elec-4">4,235 FCAF</td>
                                 <td class="fw-bold" id="due-4">169,235 FCAF</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="viewTenant(4)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="editTenant(4)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteTenant(4)"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
-                            
-                            <!-- Locataire 5 -->
-                            <tr>
+                            <tr data-tenant-id="5">
                                 <td>
                                     <div class="tenant-info">
-                                        <div class="avatar">
-                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Ba Moussa">
-                                        </div>
-                                        <div>
-                                            <div class="tenant-name">Ba Moussa</div>
-                                            <div class="tenant-phone">+221 76 567 89 01</div>
-                                        </div>
+                                        <div class="avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Ba Moussa"></div>
+                                        <div><div class="tenant-name">Ba Moussa</div><div class="tenant-phone">+221 76 567 89 01</div></div>
                                     </div>
                                 </td>
                                 <td><span class="badge badge-room">C-301</span></td>
                                 <td class="fw-bold">185,000 FCAF</td>
                                 <td>
                                     <div class="kwh-inputs">
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Ancien</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="ancien-5" value="220" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Ancien</label><input type="number" class="kwh-input" id="ancien-5" value="220" min="0"></div>
                                         <i class="fas fa-arrow-right kwh-arrow"></i>
-                                        <div class="kwh-input-group">
-                                            <label class="kwh-label">Nouveau</label>
-                                            <input type="number" class="kwh-input" 
-                                                   id="nouveau-5" value="380" min="0">
-                                        </div>
+                                        <div class="kwh-input-group"><label class="kwh-label">Nouveau</label><input type="number" class="kwh-input" id="nouveau-5" value="380" min="0"></div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;">
-                                            <div class="progress-bar bg-warning" id="progress-5" style="width: 10%"></div>
-                                        </div>
+                                        <div class="progress flex-grow-1" style="height: 8px; min-width: 60px;"><div class="progress-bar bg-warning" id="progress-5" style="width: 10%"></div></div>
                                         <small class="text-muted" id="progress-text-5">10%</small>
                                     </div>
                                     <small class="text-muted" id="consumption-5">160 kWh</small>
@@ -498,9 +324,9 @@
                                 <td class="text-primary fw-bold" id="elec-5">5,212 FCAF</td>
                                 <td class="fw-bold" id="due-5">190,212 FCAF</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
-                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
-                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="viewTenant(5)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1" onclick="editTenant(5)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteTenant(5)"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -508,56 +334,26 @@
                 </div>
             </div>
             
-            <!-- Parameters Section -->
             <div class="card-static mt-4" id="parametres">
-                <h4 class="card-title">
-                    <i class="fas fa-cog text-primary me-2"></i>
-                    Paramètres du Compte
-                </h4>
-                
+                <h4 class="card-title"><i class="fas fa-cog text-primary me-2"></i>Paramètres du Compte</h4>
                 <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Nom complet</label>
-                            <input type="text" class="form-control" value="Mamadou Diallo">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" value="diallo@email.com">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Téléphone</label>
-                            <input type="tel" class="form-control" value="+221 77 123 45 67">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="form-label">Nom de la propriété</label>
-                            <input type="text" class="form-control" value="Immeuble Diallo - Almadies">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary">
-                            <i class="fas fa-save me-2"></i>Enregistrer les modifications
-                        </button>
-                    </div>
+                    <div class="col-md-6"><div class="form-group"><label class="form-label">Nom complet</label><input type="text" class="form-control" value="Mamadou Diallo"></div></div>
+                    <div class="col-md-6"><div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" value="diallo@email.com"></div></div>
+                    <div class="col-md-6"><div class="form-group"><label class="form-label">Téléphone</label><input type="tel" class="form-control" value="+221 77 123 45 67"></div></div>
+                    <div class="col-md-6"><div class="form-group"><label class="form-label">Nom de la propriété</label><input type="text" class="form-control" value="Immeuble Diallo - Almadies"></div></div>
+                    <div class="col-12"><button class="btn btn-primary"><i class="fas fa-save me-2"></i>Enregistrer les modifications</button></div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Modale Ajouter Locataire -->
+    <!-- Modale Ajouter/Modifier Locataire -->
     <div class="modal fade" id="addTenantModal" tabindex="-1" aria-labelledby="addTenantModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content" style="border-radius: 2rem; border: none;">
                 <div class="modal-header" style="border-bottom: 1px solid #e2e8f0; padding: 1.5rem 2rem;">
                     <h5 class="modal-title" id="addTenantModalLabel" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">
-                        <i class="fas fa-user-plus text-primary me-2"></i>
-                        Nouveau Locataire
+                        <i class="fas fa-user-plus text-primary me-2"></i>Nouveau Locataire
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -624,7 +420,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="app.js"></script>

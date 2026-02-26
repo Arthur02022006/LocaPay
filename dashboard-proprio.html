@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gérant - LocaPay</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+            </div>
+            LocaPay
+        </a>
+        
+        <div class="navbar-menu">
+            <a href="#" class="navbar-link active">
+                <i class="fas fa-th-large me-1"></i>Dashboard
+            </a>
+            <a href="#locataires" class="navbar-link">
+                <i class="fas fa-users me-1"></i>Locataires
+            </a>
+            <a href="#factures" class="navbar-link">
+                <i class="fas fa-bolt me-1"></i>Factures
+            </a>
+            <a href="#parametres" class="navbar-link">
+                <i class="fas fa-cog me-1"></i>Paramètres
+            </a>
+            <div class="dropdown">
+                <button class="btn btn-outline dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+                    <div class="avatar" style="width:32px;height:32px;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Profil">
+                    </div>
+                    <span>M. Diallo</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Paramètres</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link active">
+                    <i class="fas fa-th-large"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#locataires" class="sidebar-link">
+                    <i class="fas fa-users"></i>
+                    Mes Locataires
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#factures" class="sidebar-link">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    Factures & Charges
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-history"></i>
+                    Historique
+                </a>
+            </li>
+            
+            <div class="sidebar-divider"></div>
+            
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                    <span class="badge bg-danger ms-auto">3</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#parametres" class="sidebar-link">
+                    <i class="fas fa-cog"></i>
+                    Paramètres
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="index.html" class="sidebar-link text-danger">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Déconnexion
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-fluid px-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="mb-1">Bonjour, Monsieur Diallo</h2>
+                    <p class="text-muted mb-0">Voici l'état de votre propriété aujourd'hui</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Nouveau Locataire
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon yellow">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Loyers Encaissés</h4>
+                        <div class="stat-value">1,250,000 <span>FCFA</span></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon red">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Impayés</h4>
+                        <div class="stat-value">175,000 <span>FCFA</span></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Chambres Louées</h4>
+                        <div class="stat-value">8 <span>/ 10</span></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Consommation kWh</h4>
+                        <div class="stat-value">2,450 <span>kWh</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Calculator Section -->
+            <div class="row g-4 mb-4" id="factures">
+                <div class="col-lg-6">
+                    <div class="card-static">
+                        <h4 class="card-title">
+                            <i class="fas fa-bolt text-primary me-2"></i>
+                            Calculateur de Charges - Courant
+                        </h4>
+                        
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Montant total de la facture</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-money-bill input-icon"></i>
+                                        <input type="number" id="billAmount" class="form-control has-icon" 
+                                               placeholder="50000" value="50000">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Nombre de chambres occupées</label>
+                                    <input type="number" id="roomCount" class="form-control" 
+                                           placeholder="2" value="2" min="1">
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button onclick="calculateProrata()" class="btn btn-primary w-100">
+                                    <i class="fas fa-calculator me-2"></i>
+                                    Répartir automatiquement
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Result -->
+                        <div class="calculator-result" id="calcResult" style="display:none;">
+                            <div class="text-muted mb-2">Montant par chambre</div>
+                            <div class="amount" id="prorataAmount">25,000</div>
+                            <div class="text-muted">FCFA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card-static">
+                        <h4 class="card-title">
+                            <i class="fas fa-bolt text-primary me-2"></i>
+                            Répartition kWh
+                        </h4>
+                        
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Index Ancien</label>
+                                    <input type="number" class="form-control" placeholder="120" id="kwhOld">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Index Nouveau</label>
+                                    <input type="number" class="form-control" placeholder="245" id="kwhNew">
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button onclick="calculateKwh()" class="btn btn-secondary w-100">
+                                    <i class="fas fa-calculator me-2"></i>
+                                    Calculer consommation
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-result" id="kwhResult" style="display:none;">
+                            <div class="text-muted mb-2">Consommation</div>
+                            <div class="amount" id="kwhConsumption">125</div>
+                            <div class="text-muted">kWh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tenants Table -->
+            <div class="table-container" id="locataires">
+                <div class="table-header">
+                    <h3 class="table-title">
+                        <i class="fas fa-users text-primary me-2"></i>
+                        Liste des Locataires
+                    </h3>
+                    <div class="d-flex gap-2">
+                        <input type="text" class="form-control" placeholder="Rechercher..." style="width:200px;">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus me-1"></i>Ajouter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Locataire</th>
+                                <th>Chambre</th>
+                                <th>Loyer Fixe</th>
+                                <th>kWh Nouveau</th>
+                                <th>Montant Dû</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="tenant-info">
+                                        <div class="avatar">
+                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Diallo Mamadou">
+                                        </div>
+                                        <div>
+                                            <div class="tenant-name">Diallo Mamadou</div>
+                                            <div class="tenant-phone">+221 77 123 45 67</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-room">A-101</span></td>
+                                <td class="fw-bold">150,000 FCAF</td>
+                                <td>245 kWh</td>
+                                <td class="text-success fw-bold">0 FCAF</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tenant-info">
+                                        <div class="avatar">
+                                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Ndiaye Fatou">
+                                        </div>
+                                        <div>
+                                            <div class="tenant-name">Ndiaye Fatou</div>
+                                            <div class="tenant-phone">+221 77 234 56 78</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-room">A-102</span></td>
+                                <td class="fw-bold">175,000 FCAF</td>
+                                <td>310 kWh</td>
+                                <td class="text-success fw-bold">0 FCAF</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tenant-info">
+                                        <div class="avatar">
+                                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Sarr Ousmane">
+                                        </div>
+                                        <div>
+                                            <div class="tenant-name">Sarr Ousmane</div>
+                                            <div class="tenant-phone">+221 76 345 67 89</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-room">B-201</span></td>
+                                <td class="fw-bold">200,000 FCAF</td>
+                                <td>420 kWh</td>
+                                <td class="text-danger fw-bold">200,000 FCAF</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tenant-info">
+                                        <div class="avatar">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Touré Aminata">
+                                        </div>
+                                        <div>
+                                            <div class="tenant-name">Touré Aminata</div>
+                                            <div class="tenant-phone">+221 77 456 78 90</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-room">B-202</span></td>
+                                <td class="fw-bold">165,000 FCAF</td>
+                                <td>280 kWh</td>
+                                <td class="text-success fw-bold">0 FCAF</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="tenant-info">
+                                        <div class="avatar">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Ba Moussa">
+                                        </div>
+                                        <div>
+                                            <div class="tenant-name">Ba Moussa</div>
+                                            <div class="tenant-phone">+221 76 567 89 01</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge badge-room">C-301</span></td>
+                                <td class="fw-bold">185,000 FCAF</td>
+                                <td>380 kWh</td>
+                                <td class="text-success fw-bold">0 FCAF</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-eye"></i></button>
+                                    <button class="btn btn-sm btn-outline me-1"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Parameters Section -->
+            <div class="card-static mt-4" id="parametres">
+                <h4 class="card-title">
+                    <i class="fas fa-cog text-primary me-2"></i>
+                    Paramètres du Compte
+                </h4>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Nom complet</label>
+                            <input type="text" class="form-control" value="Mamadou Diallo">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" value="diallo@email.com">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" value="+221 77 123 45 67">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-label">Nom de la propriété</label>
+                            <input type="text" class="form-control" value="Immeuble Diallo - Almadies">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-save me-2"></i>Enregistrer les modifications
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

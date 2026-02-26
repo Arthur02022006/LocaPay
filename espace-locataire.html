@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Locataire - LocaPay</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+            </div>
+            LocaPay
+        </a>
+        
+        <div class="navbar-menu">
+            <a href="#" class="navbar-link active">
+                <i class="fas fa-home me-1"></i>Accueil
+            </a>
+            <a href="#recu" class="navbar-link">
+                <i class="fas fa-receipt me-1"></i>Mon Reçu
+            </a>
+            <a href="#historique" class="navbar-link">
+                <i class="fas fa-history me-1"></i>Historique
+            </a>
+            <div class="dropdown">
+                <button class="btn btn-outline dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+                    <div class="avatar" style="width:32px;height:32px;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Profil">
+                    </div>
+                    <span>Mamadou</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" style="margin-left: 0;">
+        <div class="container-fluid px-4">
+            <!-- Header -->
+            <div class="profile-card mb-4">
+                <div class="avatar avatar-lg">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Photo de profil">
+                </div>
+                <div class="profile-info">
+                    <h2>Bienvenue, Mamadou Diallo</h2>
+                    <p class="mb-2">
+                        <span class="badge badge-room">
+                            <i class="fas fa-door-open me-1"></i>Chambre A-101
+                        </span>
+                        <span class="badge badge-success ms-2">
+                            <i class="fas fa-check-circle me-1"></i>Loué
+                        </span>
+                    </p>
+                    <div class="d-flex gap-3">
+                        <div>
+                            <div class="text-muted small">Téléphone</div>
+                            <div class="fw-semibold">+221 77 123 45 67</div>
+                        </div>
+                        <div>
+                            <div class="text-muted small">Propriétaire</div>
+                            <div class="fw-semibold">M. Diallo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end ms-auto">
+                    <div class="text-muted small">Loyer mensuel</div>
+                    <div class="fs-3 fw-bold text-dark">150,000 <span class="fs-6 fw-normal">FCFA</span></div>
+                </div>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="stats-grid mb-4">
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Statut Loyer</h4>
+                        <div class="stat-value text-success">Payé</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon yellow">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>kWh Ce Mois</h4>
+                        <div class="stat-value">245 <span>kWh</span></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Prochain Échéance</h4>
+                        <div class="stat-value">15 Fév</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Current Bill / Receipt -->
+            <div class="row g-4 mb-4" id="recu">
+                <div class="col-lg-8">
+                    <div class="bill-card">
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div>
+                                <h3 class="fw-bold mb-1">Ma Facture d'Électricité</h3>
+                                <p class="mb-0 opacity-75">Période: Janvier 2024</p>
+                            </div>
+                            <div class="text-end">
+                                <div class="opacity-75 small">Montant à payer</div>
+                                <div class="bill-amount">25,000</div>
+                                <div class="opacity-75">FCFA</div>
+                            </div>
+                        </div>
+                        
+                        <!-- kWh Details -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-4">
+                                <div class="bg-white rounded-3xl p-3 text-center">
+                                    <div class="text-muted small">Ancien Index</div>
+                                    <div class="fw-bold fs-5">120</div>
+                                    <div class="text-muted small">kWh</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="bg-white rounded-3xl p-3 text-center">
+                                    <div class="text-muted small">Nouveau Index</div>
+                                    <div class="fw-bold fs-5">245</div>
+                                    <div class="text-muted small">kWh</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="bg-white rounded-3xl p-3 text-center" style="background: var(--lp-yellow);">
+                                    <div class="text-dark small">Consommation</div>
+                                    <div class="fw-bold fs-5 text-dark">125</div>
+                                    <div class="text-dark small">kWh</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Actions -->
+                        <div class="d-flex gap-3 flex-wrap">
+                            <button class="btn btn-dark">
+                                <i class="fas fa-credit-card me-2"></i>Payer maintenant
+                            </button>
+                            <button class="btn btn-outline-light" onclick="downloadReceipt()">
+                                <i class="fas fa-download me-2"></i>Télécharger le reçu
+                            </button>
+                            <button class="btn btn-outline-light" onclick="sendProof()">
+                                <i class="fas fa-paper-plane me-2"></i>Envoyer preuve
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- Payment Info Card -->
+                    <div class="card-static h-100">
+                        <h5 class="card-title mb-3">
+                            <i class="fas fa-info-circle text-primary me-2"></i>
+                            Informations de paiement
+                        </h5>
+                        
+                        <div class="mb-3">
+                            <div class="text-muted small mb-1">Mode de paiement</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-university text-primary"></i>
+                                <span class="fw-semibold">Virement bancaire</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="text-muted small mb-1">Compte bancaire</div>
+                            <div class="fw-semibold">NSIA Banque</div>
+                            <div class="text-muted small">N°: 123 456 789 01</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="text-muted small mb-1">Contact propriétaire</div>
+                            <button class="btn btn-sm btn-outline w-100">
+                                <i class="fas fa-phone me-2"></i>Appeler
+                            </button>
+                        </div>
+                        
+                        <div>
+                            <div class="text-muted small mb-1">Assistance</div>
+                            <button class="btn btn-sm btn-primary w-100">
+                                <i class="fas fa-comments me-2"></i>Chat en direct
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment History -->
+            <div class="table-container" id="historique">
+                <div class="table-header">
+                    <h3 class="table-title">
+                        <i class="fas fa-history text-primary me-2"></i>
+                        Historique des paiements
+                    </h3>
+                </div>
+                
+                <div class="p-3">
+                    <div class="payment-history-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="stat-icon green" style="width:44px;height:44px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Loyer Janvier 2024</div>
+                                <div class="text-muted small">15 janvier 2024</div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold text-success">150,000 FCAF</div>
+                            <span class="badge badge-success">Payé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-history-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="stat-icon green" style="width:44px;height:44px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Électricité Janvier 2024</div>
+                                <div class="text-muted small">10 janvier 2024</div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold text-success">25,000 FCAF</div>
+                            <span class="badge badge-success">Payé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-history-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="stat-icon green" style="width:44px;height:44px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Loyer Décembre 2023</div>
+                                <div class="text-muted small">15 décembre 2023</div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold text-success">150,000 FCAF</div>
+                            <span class="badge badge-success">Payé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-history-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="stat-icon green" style="width:44px;height:44px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Électricité Décembre 2023</div>
+                                <div class="text-muted small">10 décembre 2023</div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold text-success">22,500 FCAF</div>
+                            <span class="badge badge-success">Payé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-history-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="stat-icon green" style="width:44px;height:44px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Loyer Novembre 2023</div>
+                                <div class="text-muted small">15 novembre 2023</div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold text-success">150,000 FCAF</div>
+                            <span class="badge badge-success">Payé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Send Proof Section -->
+            <div class="card-static mt-4">
+                <h5 class="card-title mb-3">
+                    <i class="fas fa-paper-plane text-primary me-2"></i>
+                    Envoyer une preuve de paiement
+                </h5>
+                
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label class="form-label">Type de paiement</label>
+                        <select class="form-control">
+                            <option>Loyer</option>
+                            <option>Électricité</option>
+                            <option>Eau</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Montant</label>
+                        <input type="number" class="form-control" placeholder="150000">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Joindre un fichier</label>
+                        <input type="file" class="form-control" accept="image/*,.pdf">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" onclick="submitProof()">
+                            <i class="fas fa-paper-plane me-2"></i>Envoyer la preuve
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="app.js"></script>
+    
+    <script>
+        // Functions specific to tenant view
+        function downloadReceipt() {
+            alert('Téléchargement du reçu en cours...');
+        }
+        
+        function sendProof() {
+            alert('Interface d\'envoi de preuve de paiement');
+        }
+        
+        function submitProof() {
+            alert('Preuve de paiement envoyée avec succès !');
+        }
+    </script>
+</body>
+</html>

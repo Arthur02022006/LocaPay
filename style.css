@@ -900,3 +900,63 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+/* =====================
+   kWh Input Styles (Agrandis)
+   ===================== */
+.kwh-inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kwh-input-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.kwh-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--lp-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.kwh-input {
+    width: 100%;
+    padding: 10px 14px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid var(--lp-gray-200) !important;
+    border-radius: 12px !important;
+    background: var(--lp-gray-100) !important;
+    color: var(--lp-dark) !important;
+    transition: all 150ms ease;
+}
+
+.kwh-input:focus {
+    border-color: var(--lp-yellow) !important;
+    background: var(--lp-white) !important;
+    box-shadow: 0 0 0 4px rgba(246, 194, 62, 0.2) !important;
+    outline: none !important;
+}
+
+.kwh-input::-webkit-outer-spin-button,
+.kwh-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.kwh-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.kwh-arrow {
+    color: var(--lp-gray-light);
+    font-size: 1rem;
+    margin-top: -20px;
+}
